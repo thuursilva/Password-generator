@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="Styles/style.css">
+    <title>Gerador de senhas</title>
+</head>
+<body>
+
+    <header>
+        <h1 class="cabecalho_titulo">Gerador de Senha</h1>
+    </header>
+
+    <div class="container">
+        <h2 class="container_titulo">Gere sua senha</h2>
+
+        <div class="wrapper">
+        <div class="input">
+        <input type="text" id="senha" disabled>
+        <span class="copia_senha"></span>
+        </div>
+
+        <div class="indicador"></div>
+
+        <div class="length">
+            <div class="length_details">
+            <label for="range" class="length_title">Comprimento da senha</label>
+            <span></span>
+            </div>
+            <input type="range" min="4" max="30" value="4" step="1">
+        </div>
+
+        <div class="options">
+            <label class="options_title">Configurações de senha</label>
+            <ul class="lista">
+                <li class="option">
+                    <input type="checkbox" id="minuscula" checked>
+                    <label for="minuscula">Minúsculo (a-z)</label>
+                </li>
+                <li class="option">
+                    <input type="checkbox" id="maiuscula">
+                    <label for="maiuscula">Maiúscula (A-Z)</label>
+                </li>
+                <li class="option">
+                    <input type="checkbox" id="numeros">
+                    <label for="numeros">Números (0-9)</label>
+                </li>
+                <li class="option">
+                    <input type="checkbox" id="simbolos">
+                    <label for="simbolos">Símbolos (!-$^+)</label>
+                </li>
+                <li class="option">
+                    <input type="checkbox" id="excDuplicadas">
+                    <label for="excDuplicadas">Excluir Duplicadas</label>
+                </li>
+                <li class="option">
+                    <input type="checkbox" id="espaco">
+                    <label for="espaco">Incluir Espaço</label>
+                </li>
+            </ul>
+        </div>
+
+        <button id="btn_generator">Gerar senha</button>
+    </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
